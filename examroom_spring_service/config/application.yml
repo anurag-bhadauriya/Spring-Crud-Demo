@@ -1,0 +1,39 @@
+logging:
+   level:    org:
+      springframework:
+        web: DEBUG
+   file:
+     path: logs 
+spring:
+  profiles:
+    active:
+    - dev
+    include:
+    - swagger
+  main:
+    banner-mode: off
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  datasource:
+    initialization-mode: always
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/examdb
+    username: postgres
+    password: postgres
+  h2:
+    console:
+      enabled: true
+  liquibase:
+    change-log: classpath:liquibase/liquibase-changelog.xml
+server:
+  port: 8080
+jwt:
+  secret: myjwtsecretkey

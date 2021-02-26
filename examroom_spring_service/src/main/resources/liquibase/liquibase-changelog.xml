@@ -1,0 +1,14 @@
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+  <include file="changelog/20201202114718_added_entity_Credential.xml" relativeToChangelogFile="true"/>
+  <include file="changelog/20201202114818_added_entity_School.xml" relativeToChangelogFile="true"/>
+  <include file="changelog/20201202114918_added_entity_Teacher.xml" relativeToChangelogFile="true"/>
+  <include file="changelog/20201202115018_added_entity_Student.xml" relativeToChangelogFile="true"/>
+  <include file="changelog/20201202114818_added_entity_constraints_School.xml" relativeToChangelogFile="true"/>
+  <include file="changelog/20201202114918_added_entity_constraints_Teacher.xml" relativeToChangelogFile="true"/>
+  <include file="changelog/20201202115018_added_entity_constraints_Student.xml" relativeToChangelogFile="true"/>
+</databaseChangeLog>

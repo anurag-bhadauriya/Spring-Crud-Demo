@@ -1,0 +1,59 @@
+// an ignored comment
+/** not an ignored comment */
+entity UserType{
+	emailId String required unique,
+    userType EntityType
+}
+
+entity Credential{
+	emailId String required unique,
+    password String required
+}
+
+entity School{
+	schoolName String required,
+    emailId String required unique,
+    address String,
+    description String
+}
+
+entity Teacher{
+	teacherName String required,
+    emailId String required unique,
+    address String,
+    description String
+}
+
+entity Student{
+	studentName String required,
+    emailId String required unique,
+    address String,
+    description String
+}
+
+enum EntityType {
+    SCHOOL, TEACHER, STUDENT
+}
+
+relationship OneToOne {
+	School{credential} to Credential
+}
+
+relationship OneToOne {
+	Teacher{credential} to Credential
+}
+
+relationship OneToOne {
+	Student{credential} to Credential
+}
+// defining multiple OneToMany relationships with comments
+
+
+// Set pagination options
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
