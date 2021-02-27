@@ -1,5 +1,5 @@
 Springboot service demo project. 
-This project includes below mentioned functionalaties.
+This project includes below mentioned functionalities.
 
 1. Swagger UI integration (http://localhost:8080/swagger-ui/index.html)
 2. Postgres Integration
